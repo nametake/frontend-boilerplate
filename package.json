@@ -3,5 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "nametake <nametake.kyarabuki@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-redux": "^7.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.20",
+    "@types/react-redux": "^7.1.0"
+  }
 }
