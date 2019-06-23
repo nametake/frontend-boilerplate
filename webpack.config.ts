@@ -4,6 +4,12 @@ import { Configuration } from 'webpack';
 const config: Configuration = {
   mode: 'development',
   entry: './src/index.tsx',
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.json'],
+    alias: {
+      '@': path.resolve(__dirname, 'src')
+    }
+  },
   output: {
     path: path.resolve(__dirname, 'dist')
   },
