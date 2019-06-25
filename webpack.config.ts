@@ -1,17 +1,19 @@
 import * as path from 'path';
 import { Configuration } from 'webpack';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 const config: Configuration = {
   mode: 'development',
-  entry: './src/index.tsx',
+  entry: path.resolve(__dirname, 'src', 'index.tsx'),
+  output: {
+    path: path.resolve(__dirname, 'dist')
+  },
+  plugins: [new HtmlWebpackPlugin()],
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json'],
     alias: {
       '@': path.resolve(__dirname, 'src')
     }
-  },
-  output: {
-    path: path.resolve(__dirname, 'dist')
   },
   module: {
     rules: [
