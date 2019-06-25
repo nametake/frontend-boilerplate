@@ -1,5 +1,6 @@
 import * as path from 'path';
 import { Configuration } from 'webpack';
+import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 const config: Configuration = {
@@ -8,7 +9,7 @@ const config: Configuration = {
   output: {
     path: path.resolve(__dirname, 'dist')
   },
-  plugins: [new HtmlWebpackPlugin()],
+  plugins: [new CleanWebpackPlugin(), new HtmlWebpackPlugin()],
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json'],
     alias: {
