@@ -9,13 +9,13 @@ const config: Configuration = {
   output: {
     path: path.resolve(__dirname, 'dist')
   },
-  plugins: [new CleanWebpackPlugin(), new HtmlWebpackPlugin()],
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json'],
     alias: {
       '@': path.resolve(__dirname, 'src')
     }
   },
+  plugins: [new CleanWebpackPlugin(), new HtmlWebpackPlugin()],
   module: {
     rules: [
       {
