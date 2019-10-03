@@ -16,6 +16,9 @@
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
       "eslint"
+    ],
+    "*.json": [
+      "jsonlint"
     ]
   },
   "dependencies": {
