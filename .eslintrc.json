@@ -1,6 +1,7 @@
 {
   "extends": ["airbnb"],
   "rules": {
+    "import/no-relative-parent-imports": "error",
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }]
   },
   "plugins": ["react"],
@@ -19,5 +20,8 @@
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
+  },
+  "settings": {
+    "import/resolver": "webpack"
   }
 }
