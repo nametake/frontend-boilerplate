@@ -3,11 +3,13 @@
     "incremental": true,
     "target": "es6",
     "module": "commonjs",
-    "lib": ["dom", "es6"],
+    "lib": [
+      "dom",
+      "es6"
+    ],
     "jsx": "react",
     "sourceMap": true,
     "removeComments": true,
-
     "noImplicitAny": true,
     "strictNullChecks": true,
     "strictFunctionTypes": true,
@@ -19,11 +21,12 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-
     "moduleResolution": "node",
     "baseUrl": "./",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": [
+        "src/*"
+      ]
     },
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true

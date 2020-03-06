@@ -1,10 +1,22 @@
 {
-  "extends": ["airbnb"],
+  "extends": [
+    "airbnb"
+  ],
   "rules": {
     "import/no-relative-parent-imports": "error",
-    "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }]
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".tsx"
+        ]
+      }
+    ]
   },
-  "plugins": ["react"],
+  "plugins": [
+    "react",
+    "emotion"
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
