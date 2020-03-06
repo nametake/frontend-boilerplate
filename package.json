@@ -2,7 +2,7 @@
   "name": "frontend-boilerplate",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "nametake <nametake.kyarabuki@gmail.com>",
+  "author": "nametake",
   "license": "MIT",
   "scripts": {
     "build": "webpack",
