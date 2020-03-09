@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "lint": "eslint \"./src/**/*.{ts,tsx}\"",
+    "lint:ts": "eslint \"./src/**/*.{ts,tsx}\"",
+    "lint:css": "stylelint \"./src/**/*.{ts,tsx}\"",
     "start": "webpack-dev-server"
   },
   "husky": {
