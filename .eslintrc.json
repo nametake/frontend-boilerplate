@@ -1,6 +1,7 @@
 {
   "extends": [
-    "airbnb"
+    "airbnb",
+    "prettier"
   ],
   "rules": {
     "import/no-relative-parent-imports": "error",
