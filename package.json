@@ -18,7 +18,8 @@
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
       "prettier",
-      "eslint"
+      "eslint",
+      "stylelint"
     ],
     "*.json": [
       "jsonlint"
