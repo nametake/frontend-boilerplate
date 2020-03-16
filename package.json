@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "lint": "eslint \"./src/**/*.{ts,tsx}\"",
+    "lint:ts": "eslint \"./src/**/*.{ts,tsx}\"",
+    "lint:css": "stylelint \"./src/**/*.{ts,tsx}\"",
     "start": "webpack-dev-server"
   },
   "husky": {
@@ -17,13 +18,16 @@
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
       "prettier",
-      "eslint"
+      "eslint",
+      "stylelint"
     ],
     "*.json": [
       "jsonlint"
     ]
   },
   "dependencies": {
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-redux": "^7.2.0",
@@ -43,6 +47,7 @@
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.10.0",
     "eslint-import-resolver-webpack": "^0.12.1",
+    "eslint-plugin-emotion": "^10.0.27",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.2",
@@ -54,6 +59,12 @@
     "lint-staged": "^10.0.8",
     "node-pre-gyp": "^0.14.0",
     "prettier": "^1.19.1",
+    "stylelint": "^13.2.1",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-order": "^4.0.0",
+    "stylelint-processor-styled-components": "^1.10.0",
     "ts-loader": "^6.2.1",
     "ts-node": "^8.6.2",
     "typescript": "^3.8.3",
