@@ -5,8 +5,12 @@ const Text = styled.div`
   color: hotpink;
 `;
 
-function App() {
-  return <Text>Hello World!</Text>;
-}
+export const App = () => {
+  return (
+    <div>
+      <Text>Hello World!</Text>
+    </div>
+  );
+};
 
-export default App;
+export default { App };
