@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import * as path from 'path';
 import { Configuration } from 'webpack';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
@@ -17,6 +18,12 @@ const config: Configuration = {
         test: /\.[t]sx?$/,
         include: path.resolve(__dirname, 'src'),
         use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env']
+            }
+          },
           {
             loader: 'ts-loader'
           }
