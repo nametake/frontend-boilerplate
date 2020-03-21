@@ -3,6 +3,10 @@
     "airbnb",
     "prettier"
   ],
+  "plugins": [
+    "react",
+    "emotion"
+  ],
   "rules": {
     "import/no-relative-parent-imports": "error",
     "react/jsx-filename-extension": [
@@ -14,10 +18,6 @@
       }
     ]
   },
-  "plugins": [
-    "react",
-    "emotion"
-  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
