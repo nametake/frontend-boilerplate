@@ -1,11 +1,14 @@
 {
   "extends": [
     "airbnb",
-    "prettier"
+    "prettier",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
   "plugins": [
     "react",
-    "emotion"
+    "emotion",
+    "@typescript-eslint"
   ],
   "rules": {
     "import/no-relative-parent-imports": "error",
