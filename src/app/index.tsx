@@ -1,12 +1,16 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { Input } from '@/app/components/atoms/Input';
 
 const Text = styled.div`
   color: hotpink;
 `;
 
-function App() {
-  return <Text>Hello World!</Text>;
-}
-
-export default App;
+export const App: React.FC = () => {
+  return (
+    <div>
+      <Input />
+      <Text>Hello World!</Text>
+    </div>
+  );
+};

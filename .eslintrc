@@ -1,9 +1,21 @@
 {
   "extends": [
     "airbnb",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
     "prettier"
   ],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "emotion",
+    "@typescript-eslint"
+  ],
   "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error",
+    "import/prefer-default-export": "off",
+    "import/no-default-export": "error",
     "import/no-relative-parent-imports": "error",
     "react/jsx-filename-extension": [
       1,
@@ -14,10 +26,6 @@
       }
     ]
   },
-  "plugins": [
-    "react",
-    "emotion"
-  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
