@@ -31,6 +31,12 @@ importのパスを`@/`から始まる絶対パスで指定できるように以�
 
 意志を持って変更をしているルールを以下に記述します。
 
+-   `"react-hooks/rules-of-hooks": "error"`
+
+-   `"react-hooks/exhaustive-deps": "error"`
+
+    Hooksのdepsの指定はバグになりやすいためどちらもerrorを指定しています。
+
 -   `"import/prefer-default-export": "off"`
 
 -   `"import/no-default-export": "error"`
