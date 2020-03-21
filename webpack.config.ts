@@ -1,4 +1,4 @@
-/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable import/no-extraneous-dependencies,import/no-default-export */
 import * as path from 'path';
 import { Configuration } from 'webpack';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
