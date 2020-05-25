@@ -12,6 +12,10 @@
     "@typescript-eslint"
   ],
   "rules": {
+    "comma-dangle": [
+      "error",
+      "always-multiline"
+    ],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error",
     "import/prefer-default-export": "off",
