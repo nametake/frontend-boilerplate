@@ -12,6 +12,9 @@
     "@typescript-eslint"
   ],
   "rules": {
+    "no-console": [
+      "error"
+    ],
     "comma-dangle": [
       "error",
       "always-multiline"
