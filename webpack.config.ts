@@ -1,8 +1,14 @@
 /* eslint-disable import/no-extraneous-dependencies,import/no-default-export */
 import * as path from 'path';
-import { Configuration } from 'webpack';
+import { Configuration, Plugin, HotModuleReplacementPlugin } from 'webpack';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
+
+const isDevelopment = process.env.NODE_ENV !== 'production';
+
+// https://www.typescriptlang.org/docs/handbook/advanced-types.html#user-defined-type-guards
+const isPlugin = (plugin: unknown): plugin is Plugin => Boolean(plugin);
 
 const config: Configuration = {
   mode: 'development',
@@ -42,7 +48,9 @@ const config: Configuration = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'assets', 'index.html'),
     }),
-  ],
+    isDevelopment && new HotModuleReplacementPlugin(),
+    isDevelopment && new ReactRefreshWebpackPlugin(),
+  ].filter(isPlugin),
   devServer: {
     contentBase: './dist',
     historyApiFallback: true,
