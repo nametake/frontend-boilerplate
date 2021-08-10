@@ -1,9 +1,18 @@
 /* eslint-disable import/no-extraneous-dependencies,import/no-default-export */
 import * as path from 'path';
-import { Configuration, Plugin, HotModuleReplacementPlugin } from 'webpack';
+import {
+  Configuration as WebpackConfiguration,
+  Plugin,
+  HotModuleReplacementPlugin,
+} from 'webpack';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
+import { Configuration as WebpackDevServerConfiguration } from 'webpack-dev-server';
+
+interface Configuration extends WebpackConfiguration {
+  devServer?: WebpackDevServerConfiguration;
+}
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
