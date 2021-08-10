@@ -64,7 +64,7 @@
     "lint-staged": "10.2.2",
     "node-pre-gyp": "0.14.0",
     "prettier": "2.1.2",
-    "react-refresh": "0.9.0",
+    "react-refresh": "0.10.0",
     "stylelint": "13.7.2",
     "stylelint-config-rational-order": "0.1.2",
     "stylelint-config-standard": "20.0.0",
