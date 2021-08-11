@@ -59,7 +59,7 @@
     "eslint-plugin-react": "7.21.5",
     "eslint-plugin-react-hooks": "4.2.0",
     "html-webpack-plugin": "4.3.0",
-    "husky": "4.2.5",
+    "husky": "4.3.8",
     "jsonlint": "1.6.3",
     "lint-staged": "10.2.2",
     "node-pre-gyp": "0.14.0",
