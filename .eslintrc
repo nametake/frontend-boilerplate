@@ -8,7 +8,7 @@
   "plugins": [
     "react",
     "react-hooks",
-    "emotion",
+    "@emotion",
     "@typescript-eslint"
   ],
   "rules": {
