@@ -1,13 +1,12 @@
 /* eslint-disable import/no-extraneous-dependencies,import/no-default-export */
+import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
+import { CleanWebpackPlugin } from 'clean-webpack-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 import * as path from 'path';
 import {
   Configuration as WebpackConfiguration,
   HotModuleReplacementPlugin,
-  WebpackPluginInstance,
 } from 'webpack';
-import { CleanWebpackPlugin } from 'clean-webpack-plugin';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import { Configuration as WebpackDevServerConfiguration } from 'webpack-dev-server';
 
 interface Configuration extends WebpackConfiguration {
@@ -16,9 +15,9 @@ interface Configuration extends WebpackConfiguration {
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
-// https://www.typescriptlang.org/docs/handbook/advanced-types.html#user-defined-type-guards
-const isPlugin = (plugin: unknown): plugin is WebpackPluginInstance =>
-  Boolean(plugin);
+// https://www.typescriptlang.org/docs/handbook/2/narrowing.html#using-type-predicates
+// const isPlugin = (plugin: unknown): plugin is WebpackPluginInstance =>
+//   Boolean(plugin);
 
 const config: Configuration = {
   mode: 'development',
@@ -62,9 +61,10 @@ const config: Configuration = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'assets', 'index.html'),
     }),
-    isDevelopment && new HotModuleReplacementPlugin(),
-    isDevelopment && new ReactRefreshWebpackPlugin(),
-  ].filter(isPlugin),
+    ...(isDevelopment
+      ? [new HotModuleReplacementPlugin(), new ReactRefreshWebpackPlugin()]
+      : []),
+  ],
   devServer: {
     contentBase: './dist',
     historyApiFallback: true,
