@@ -25,11 +25,22 @@
     ],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never",
+        "tsx": "never",
+        "js": "never",
+        "mjs": "never",
+        "jsx": "never"
+      }
+    ],
     "import/prefer-default-export": "off",
     "import/no-default-export": "error",
     "import/no-relative-parent-imports": "error",
     "react/jsx-filename-extension": [
-      1,
+      "error",
       {
         "extensions": [
           ".tsx"

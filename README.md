@@ -37,6 +37,10 @@ importのパスを`@/`から始まる絶対パスで指定できるように以�
 
     Hooksのdepsの指定はバグになりやすいためどちらもerrorを指定しています。
 
+-   `"import/extensions": ["error", "ignorePackages", {"ts": "never", "tsx": "never", "js": "never", "mjs": "never", "jsx": "never"}]`
+
+    airbnbの設定がTypeScriptに対応していないため、拡張子を追加しています。
+
 -   `"import/prefer-default-export": "off"`
 
 -   `"import/no-default-export": "error"`
