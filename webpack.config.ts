@@ -2,8 +2,8 @@
 import * as path from 'path';
 import {
   Configuration as WebpackConfiguration,
-  Plugin,
   HotModuleReplacementPlugin,
+  WebpackPluginInstance,
 } from 'webpack';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
@@ -17,7 +17,8 @@ interface Configuration extends WebpackConfiguration {
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
 // https://www.typescriptlang.org/docs/handbook/advanced-types.html#user-defined-type-guards
-const isPlugin = (plugin: unknown): plugin is Plugin => Boolean(plugin);
+const isPlugin = (plugin: unknown): plugin is WebpackPluginInstance =>
+  Boolean(plugin);
 
 const config: Configuration = {
   mode: 'development',
