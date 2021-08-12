@@ -8,7 +8,9 @@
     "build": "webpack",
     "lint:ts": "eslint \"./src/**/*.{ts,tsx}\"",
     "lint:css": "stylelint \"./src/**/*.{ts,tsx}\"",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "husky": {
     "hooks": {
@@ -39,6 +41,10 @@
     "@babel/runtime": "7.14.8",
     "@emotion/eslint-plugin": "11.2.0",
     "@pmmmwh/react-refresh-webpack-plugin": "0.4.3",
+    "@storybook/addon-actions": "^6.3.7",
+    "@storybook/addon-essentials": "^6.3.7",
+    "@storybook/addon-links": "^6.3.7",
+    "@storybook/react": "^6.3.7",
     "@types/html-webpack-plugin": "3.2.6",
     "@types/react": "17.0.17",
     "@types/react-dom": "17.0.9",
