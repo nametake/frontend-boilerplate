@@ -3,16 +3,8 @@ import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import * as path from 'path';
-import {
-  Configuration as WebpackConfiguration,
-  HotModuleReplacementPlugin,
-} from 'webpack';
-import { Configuration as WebpackDevServerConfiguration } from 'webpack-dev-server';
+import { Configuration, HotModuleReplacementPlugin } from 'webpack';
 /* eslint-enable */
-
-interface Configuration extends WebpackConfiguration {
-  devServer?: WebpackDevServerConfiguration;
-}
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
 

@@ -8,7 +8,7 @@
     "build": "webpack",
     "lint:ts": "eslint \"./**/*.{js,jsx,ts,tsx}\"",
     "lint:css": "stylelint \"./**/*.{js,jsx,ts,tsx}\"",
-    "start": "webpack-dev-server",
+    "start": "webpack serve",
     "prepare": "husky install"
   },
   "lint-staged": {
