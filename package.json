@@ -6,13 +6,13 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "lint:ts": "eslint \"./src/**/*.{ts,tsx}\"",
-    "lint:css": "stylelint \"./src/**/*.{ts,tsx}\"",
+    "lint:ts": "eslint \"./**/*.{js,jsx,ts,tsx}\"",
+    "lint:css": "stylelint \"./**/*.{js,jsx,ts,tsx}\"",
     "start": "webpack-dev-server",
     "prepare": "husky install"
   },
   "lint-staged": {
-    "src/**/*.{ts,tsx}": [
+    "*.{js,jsx,ts,tsx}": [
       "prettier",
       "eslint",
       "stylelint"
