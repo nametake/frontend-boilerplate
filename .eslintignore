@@ -6,3 +6,6 @@
 
 # build
 /dist
+
+# eslintrc
+/.eslintrc.js

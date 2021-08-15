@@ -1,39 +1,19 @@
 module.exports = {
   extends: [
-    'airbnb',
-    'plugin:@typescript-eslint/eslint-recommended',
+    'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:eslint-comments/recommended',
-    'prettier',
+    'airbnb-typescript',
+    'airbnb/hooks',
+    'prettier', // Must be last
   ],
-  plugins: ['react', 'react-hooks', '@emotion', '@typescript-eslint'],
+  plugins: ['@typescript-eslint'],
   rules: {
     'no-console': ['error'],
-    'comma-dangle': ['error', 'always-multiline'],
-    'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': ['error'],
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'error',
-    'import/extensions': [
-      'error',
-      'ignorePackages',
-      {
-        ts: 'never',
-        tsx: 'never',
-        js: 'never',
-        mjs: 'never',
-        jsx: 'never',
-      },
-    ],
     'import/prefer-default-export': 'off',
     'import/no-default-export': 'error',
     'import/no-relative-parent-imports': 'error',
-    'react/jsx-filename-extension': [
-      'error',
-      {
-        extensions: ['.tsx'],
-      },
-    ],
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -42,6 +22,7 @@ module.exports = {
     },
     ecmaVersion: 2018,
     sourceType: 'module',
+    project: './tsconfig.json',
   },
   env: {
     browser: true,
