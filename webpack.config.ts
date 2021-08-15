@@ -1,4 +1,4 @@
-/* eslint-disable import/no-extraneous-dependencies,import/no-default-export */
+/* eslint-disable import/no-extraneous-dependencies */
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
@@ -8,6 +8,7 @@ import {
   HotModuleReplacementPlugin,
 } from 'webpack';
 import { Configuration as WebpackDevServerConfiguration } from 'webpack-dev-server';
+/* eslint-enable */
 
 interface Configuration extends WebpackConfiguration {
   devServer?: WebpackDevServerConfiguration;
@@ -71,4 +72,5 @@ const config: Configuration = {
   },
 };
 
+// eslint-disable-next-line import/no-default-export
 export default config;

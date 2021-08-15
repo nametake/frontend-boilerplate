@@ -10,9 +10,10 @@ export function App(): JSX.Element {
   // Async test
   useEffect(() => {
     async function p() {
-      return Promise.resolve();
+      return Promise.resolve('ASYNC');
     }
-    p();
+    // finally to pass linter
+    p().finally(() => { });
   }, []);
   return (
     <div>
