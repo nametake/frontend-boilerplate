@@ -12,7 +12,7 @@ Compoenntの定義には[emotion](https://emotion.sh/docs/introduction)のstyled
 
 TypeScriptのバージョンは`esnext`にしています。適宜プロダクトごとに固定してください。
 
-importのパスを`@/`から始まる絶対パスで指定できるように以下の設定をしています。詳細は[該当の記事](https://nametake.github.io/posts/2019/10/07/typescript-absolute-imports/)を参照してください。
+importのパスを`@/`から始まる絶対パスで指定できるように以下の設定をしています。詳細は[こちらの記事](https://nametake.github.io/posts/2019/10/07/typescript-absolute-imports/)を参照してください。
 
 ```jsonc
     "baseUrl": "./",
@@ -23,23 +23,13 @@ importのパスを`@/`から始まる絶対パスで指定できるように以�
     },
 ```
 
-その他の設定は強く意志を持って設定していないため、適宜変更してください。
+その他の設定はプロジェクトに合わせて適宜変更してください。
 
 ### eslint
 
 `airbnb`の設定をベースにしています。
 
-意志を持って変更をしているルールを以下に記述します。
-
--   `"react-hooks/rules-of-hooks": "error"`
-
--   `"react-hooks/exhaustive-deps": "error"`
-
-    Hooksのdepsの指定はバグになりやすいためどちらもerrorを指定しています。
-
--   `"import/extensions": ["error", "ignorePackages", {"ts": "never", "tsx": "never", "js": "never", "mjs": "never", "jsx": "never"}]`
-
-    airbnbの設定がTypeScriptに対応していないため、拡張子を追加しています。
+意図的に変更をしているルールを以下に記述します。
 
 -   `"import/prefer-default-export": "off"`
 
@@ -51,9 +41,6 @@ importのパスを`@/`から始まる絶対パスで指定できるように以�
 
     親を指定した相対パスのimportを禁止するために設定しています。
 
--   `"react/jsx-filename-extension": [ 1, { "extensions": [ ".tsx" ] } ]`
-
-    JSXを含むファイルの拡張子を`.tsx`に限定したいため設定しています。
 
 ### Webpack
 
