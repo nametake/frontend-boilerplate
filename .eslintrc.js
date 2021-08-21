@@ -4,6 +4,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:eslint-comments/recommended',
+    'airbnb',
     'airbnb-typescript',
     'airbnb/hooks',
     'prettier', // Must be last
