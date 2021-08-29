@@ -16,9 +16,6 @@
       "prettier",
       "eslint",
       "stylelint"
-    ],
-    "*.json": [
-      "jsonlint"
     ]
   },
   "dependencies": {
@@ -53,12 +50,11 @@
     "eslint-plugin-react-hooks": "4.2.0",
     "html-webpack-plugin": "5.3.2",
     "husky": "7.0.2",
-    "jsonlint": "1.6.3",
     "lint-staged": "11.1.2",
     "node-pre-gyp": "0.17.0",
     "prettier": "2.3.2",
     "stylelint": "13.13.1",
-    "stylelint-config-rational-order": "0.1.2",
+    "stylelint-config-idiomatic-order": "8.1.0",
     "stylelint-config-standard": "22.0.0",
     "stylelint-config-styled-components": "0.1.1",
     "stylelint-order": "4.1.0",

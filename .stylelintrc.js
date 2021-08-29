@@ -2,7 +2,7 @@ module.exports = {
   processors: ['stylelint-processor-styled-components'],
   extends: [
     'stylelint-config-standard',
-    'stylelint-config-rational-order',
+    'stylelint-config-idiomatic-order',
     'stylelint-config-styled-components',
   ],
 };
