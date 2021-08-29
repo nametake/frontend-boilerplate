@@ -26,6 +26,10 @@ const StyledCheckbox = styled.div<Pick<CheckboxProps, 'checked'>>`
   background: ${({ checked }) => (checked ? 'salmon' : 'papayawhip')};
   border-radius: 3px;
   transition: all 150ms;
+
+  ${/* sc-selector */ HiddenCheckbox}:focus + & {
+    box-shadow: 0 0 0 3px pink;
+  }
 `;
 
 const CheckboxContainer = styled.div`
