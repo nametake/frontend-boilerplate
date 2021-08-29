@@ -18,4 +18,6 @@ const Template: ComponentStory<typeof Checkbox> = (args) => (
 /* eslint-enable */
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  checked: true,
+};
