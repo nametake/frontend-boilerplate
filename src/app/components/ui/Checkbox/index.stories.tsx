@@ -27,7 +27,7 @@ const Template: ComponentStory<typeof Checkbox> = ({
   const [check, setCheck] = useState(checked ?? false);
   const handleChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
-      onChange(e);
+      onChange?.(e);
       setCheck(e.target.checked);
     },
     [onChange]
