@@ -15,6 +15,7 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'import/no-default-export': 'error',
     'import/no-relative-parent-imports': 'error',
+    'react/prop-types': 'off',
     'react/require-default-props': 'off',
   },
   parser: '@typescript-eslint/parser',
