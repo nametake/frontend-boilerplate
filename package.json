@@ -11,7 +11,7 @@
     "start": "webpack serve",
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006 --ci",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -o ./dist/storybook"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
