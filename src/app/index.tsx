@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import styled from '@emotion/styled';
-import { Input } from '@/app/components/atoms/Input';
-import { Checkbox } from '@/app/components/atoms/Checkbox';
+import { Input } from '@/app/components/ui/Input';
+import { Checkbox } from '@/app/components/ui/Checkbox';
 
 const Text = styled.div`
   color: hotpink;
