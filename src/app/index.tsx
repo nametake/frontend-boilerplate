@@ -8,9 +8,14 @@ const Text = styled.div`
 `;
 
 export function App(): JSX.Element {
-  const [checked, setChecked] = useState(false);
-  const handleChangeCheckbox = useCallback(() => {
-    setChecked((c) => !c);
+  const [checked1, setChecked1] = useState(false);
+  const handleChangeCheckbox1 = useCallback(() => {
+    setChecked1((c) => !c);
+  }, []);
+
+  const [checked2, setChecked2] = useState(false);
+  const handleChangeCheckbox2 = useCallback(() => {
+    setChecked2((c) => !c);
   }, []);
 
   // Async test
@@ -24,7 +29,16 @@ export function App(): JSX.Element {
   return (
     <div>
       <Input />
-      <Checkbox checked={checked} onChange={handleChangeCheckbox} />
+      <div>
+        <Checkbox checked={checked2} onChange={handleChangeCheckbox2} />
+      </div>
+      <div>
+        <Checkbox
+          label="Label text"
+          checked={checked1}
+          onChange={handleChangeCheckbox1}
+        />
+      </div>
       <Text>Hello World!</Text>
     </div>
   );
