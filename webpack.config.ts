@@ -1,4 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
+import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import * as path from 'path';
 import { Configuration } from 'webpack';
@@ -21,16 +22,6 @@ const config: Configuration = {
         use: [
           {
             loader: 'babel-loader',
-            options: {
-              presets: ['@babel/preset-env'],
-              plugins: [
-                '@babel/plugin-transform-runtime',
-                '@babel/plugin-transform-modules-commonjs',
-              ],
-            },
-          },
-          {
-            loader: 'ts-loader',
           },
         ],
       },
@@ -43,6 +34,7 @@ const config: Configuration = {
     },
   },
   plugins: [
+    new ForkTsCheckerWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'assets', 'index.html'),
     }),
