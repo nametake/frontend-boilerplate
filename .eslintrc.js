@@ -12,9 +12,9 @@ module.exports = {
   plugins: ['@typescript-eslint'],
   rules: {
     'no-console': ['error'],
+    'no-restricted-imports': ['error', { patterns: ['../*'] }],
     'import/prefer-default-export': 'off',
     'import/no-default-export': 'error',
-    'import/no-relative-parent-imports': 'error',
     'react/prop-types': 'off',
     'react/require-default-props': 'off',
   },
