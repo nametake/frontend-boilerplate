@@ -15,6 +15,25 @@ module.exports = {
     'no-restricted-imports': ['error', { patterns: ['../*'] }],
     'import/prefer-default-export': 'off',
     'import/no-default-export': 'error',
+    'import/order': [
+      'error',
+      {
+        groups: ['builtin', 'external', 'parent', 'sibling', 'index'],
+        pathGroups: [
+          {
+            pattern: 'react',
+            group: 'builtin',
+            position: 'before',
+          },
+          {
+            pattern: '@/**',
+            group: 'parent',
+          },
+        ],
+        'newlines-between': 'always',
+        pathGroupsExcludedImportTypes: ['react'],
+      },
+    ],
     'react/prop-types': 'off',
     'react/require-default-props': 'off',
   },
