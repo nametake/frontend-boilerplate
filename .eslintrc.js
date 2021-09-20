@@ -19,6 +19,10 @@ module.exports = {
       'error',
       {
         groups: ['builtin', 'external', 'parent', 'sibling', 'index'],
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true,
+        },
         pathGroups: [
           {
             pattern: 'react',
