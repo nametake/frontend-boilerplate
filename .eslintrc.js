@@ -61,4 +61,12 @@ module.exports = {
   settings: {
     'import/resolver': 'webpack',
   },
+  overrides: [
+    {
+      files: ['*.test.{js,jsx,ts,tsx}'],
+      rules: {
+        'no-restricted-imports': 'off',
+      },
+    },
+  ],
 };
