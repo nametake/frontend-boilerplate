@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack",
+    "test": "jest",
     "lint:ts": "eslint \"./**/*.{js,jsx,ts,tsx}\"",
     "lint:css": "stylelint \"./**/*.{js,jsx,ts,tsx}\"",
     "start": "webpack serve",
