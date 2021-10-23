@@ -68,7 +68,7 @@
     "lint-staged": "11.2.3",
     "node-pre-gyp": "0.17.0",
     "prettier": "2.4.1",
-    "stylelint": "13.13.1",
+    "stylelint": "14.0.0",
     "stylelint-config-idiomatic-order": "8.1.0",
     "stylelint-config-standard": "22.0.0",
     "stylelint-config-styled-components": "0.1.1",
