@@ -4,5 +4,10 @@
     "group:allNonMajor",
     "group:definitelyTyped",
     "packages:linters"
-  ]
+  ],
+  "vulnerabilityAlerts": {
+    "labels": [
+      "security"
+    ]
+  }
 }
