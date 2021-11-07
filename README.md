@@ -31,16 +31,29 @@ importのパスを`@/`から始まる絶対パスで指定できるように以�
 
 意図的に変更をしているルールを以下に記述します。
 
--   `"import/prefer-default-export": "off"`
+-   `'no-console': ['error']`
 
--   `"import/no-default-export": "error"`
+    consoleに文字列が出力されないようにしています。
 
-    [TypeScript Deep Dive](https://basarat.gitbook.io/typescript/main-1/defaultisbad)で`export deault`を禁止することを推奨しているため上記2つを設定しています。
-
--   `"import/no-relative-parent-imports": "error"`
+-   `'no-restricted-imports': ['error', { patterns: ['../*'] }]`
 
     親を指定した相対パスのimportを禁止するために設定しています。
 
+-   `'import/prefer-default-export': 'off'`
+
+-   `'import/no-default-export': 'error'`
+
+    [TypeScript Deep Dive](https://basarat.gitbook.io/typescript/main-1/defaultisbad)で`export deault`を禁止することを推奨しているため上記2つを設定しています。
+
+-   `'import/order': ['error', { ... }]`
+
+    import順で差分が発生しないように指定しています。
+
+-   `'react/prop-types': 'off'`
+
+-   `'react/require-default-props': 'off'`
+
+    TypeScriptで型チェックをしているためoffにしています。
 
 ### Webpack
 
