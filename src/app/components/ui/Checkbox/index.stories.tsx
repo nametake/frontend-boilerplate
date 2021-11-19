@@ -20,11 +20,11 @@ export default {
 } as ComponentMeta<typeof Checkbox>;
 
 /* eslint-disable react/jsx-props-no-spreading */
-const Template: ComponentStory<typeof Checkbox> = ({
+const Template: ComponentStory<typeof Checkbox> = function Template({
   checked,
   onChange,
   ...args
-}) => {
+}) {
   const [check, setCheck] = useState(checked ?? false);
   const handleChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {

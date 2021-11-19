@@ -9,7 +9,7 @@ const Text = styled.div`
   color: hotpink;
 `;
 
-export function App(): JSX.Element {
+export const App = function App(): JSX.Element {
   const [checked1, setChecked1] = useState(false);
   const handleChangeCheckbox1 = useCallback(() => {
     setChecked1((c) => !c);
@@ -44,4 +44,4 @@ export function App(): JSX.Element {
       <Text>Hello World!</Text>
     </div>
   );
-}
+};

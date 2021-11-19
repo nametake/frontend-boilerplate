@@ -13,7 +13,9 @@ export default {
 } as ComponentMeta<typeof Input>;
 
 /* eslint-disable react/jsx-props-no-spreading */
-const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />;
+const Template: ComponentStory<typeof Input> = function Template(args) {
+  return <Input {...args} />;
+};
 /* eslint-enable */
 
 export const Default = Template.bind({});
