@@ -61,7 +61,7 @@ const LabelText = styled.span`
 `;
 
 /* eslint-disable react/jsx-props-no-spreading */
-export function Checkbox({
+export const Checkbox = function Checkbox({
   label,
   checked,
   ...props
@@ -79,5 +79,5 @@ export function Checkbox({
       {label && <LabelText>{label}</LabelText>}
     </Label>
   );
-}
+};
 /* eslint-enable */
