@@ -2,8 +2,20 @@
 name: CI
 on: [push]
 jobs:
+  setup:
+    name: SetUp
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          cache: yarn
+      - name: 'Install'
+        run: yarn install
   test:
     name: Test
+    needs:
+      - setup
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -14,12 +26,38 @@ jobs:
         run: yarn install
       - name: 'Test'
         run: yarn test
+  build:
+    name: Build
+    needs:
+      - setup
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          cache: yarn
+      - name: 'Install'
+        run: yarn install
       - name: 'Build'
         run: yarn build
+  build-storybook:
+    name: Build Storybook
+    needs:
+      - setup
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          cache: yarn
+      - name: 'Install'
+        run: yarn install
       - name: 'Build Storybook'
         run: yarn build-storybook
-  lint:
-    name: Lint
+  lint-ts:
+    name: Lint TypeScript
+    needs:
+      - setup
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -30,5 +68,17 @@ jobs:
         run: yarn install
       - name: 'Lint TypeScript'
         run: yarn lint:ts
+  lint-css:
+    name: Lint CSS
+    needs:
+      - setup
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          cache: yarn
+      - name: 'Install'
+        run: yarn install
       - name: 'Lint CSS'
         run: yarn lint:css
