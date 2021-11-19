@@ -18,7 +18,7 @@ jobs:
           cache-name: cache-node-modules
         with:
           path: "**/node_modules"
-          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
   test:
     name: Test
     needs:
