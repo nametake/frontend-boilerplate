@@ -22,8 +22,6 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           cache: yarn
-      - name: 'Install'
-        run: yarn install
       - name: 'Test'
         run: yarn test
   build:
@@ -36,8 +34,6 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           cache: yarn
-      - name: 'Install'
-        run: yarn install
       - name: 'Build'
         run: yarn build
   build-storybook:
@@ -50,8 +46,6 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           cache: yarn
-      - name: 'Install'
-        run: yarn install
       - name: 'Build Storybook'
         run: yarn build-storybook
   lint-ts:
@@ -64,8 +58,6 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           cache: yarn
-      - name: 'Install'
-        run: yarn install
       - name: 'Lint TypeScript'
         run: yarn lint:ts
   lint-css:
@@ -78,7 +70,5 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           cache: yarn
-      - name: 'Install'
-        run: yarn install
       - name: 'Lint CSS'
         run: yarn lint:css
