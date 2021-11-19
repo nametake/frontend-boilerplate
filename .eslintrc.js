@@ -13,6 +13,7 @@ module.exports = {
   rules: {
     'no-console': ['error'],
     'no-restricted-imports': ['error', { patterns: ['../*'] }],
+    'sort-imports': ['error', { ignoreDeclarationSort: true }],
     'import/prefer-default-export': 'off',
     'import/no-default-export': 'error',
     'import/order': [
