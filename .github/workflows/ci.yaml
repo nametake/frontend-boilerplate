@@ -12,6 +12,7 @@ jobs:
           cache: yarn
       - name: 'Install'
         run: yarn install
+      - run: git diff
       - name: Cache node modules
         uses: actions/cache@v2
         env:
