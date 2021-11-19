@@ -11,16 +11,14 @@ jobs:
         with:
           cache: yarn
       - name: 'Install'
-        run: yarn install --frozen-lockfile
-      - run: git diff
+        run: yarn install
       - name: Cache node modules
         uses: actions/cache@v2
         env:
           cache-name: cache-node-modules
         with:
-          path: |
-            **/node_modules
-          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+          path: "**/node_modules"
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('yarn.lock') }}
   test:
     name: Test
     needs:
@@ -36,11 +34,8 @@ jobs:
         env:
           cache-name: cache-node-modules
         with:
-          path: |
-            **/node_modules
-          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-${{ env.cache-name }}-
+          path: "**/node_modules"
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('yarn.lock') }}
       - name: 'Test'
         run: yarn test
   build:
@@ -58,11 +53,8 @@ jobs:
         env:
           cache-name: cache-node-modules
         with:
-          path: |
-            **/node_modules
-          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-${{ env.cache-name }}-
+          path: "**/node_modules"
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('yarn.lock') }}
       - name: 'Build'
         run: yarn build
   build-storybook:
@@ -80,11 +72,8 @@ jobs:
         env:
           cache-name: cache-node-modules
         with:
-          path: |
-            **/node_modules
-          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-${{ env.cache-name }}-
+          path: "**/node_modules"
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('yarn.lock') }}
       - name: 'Build Storybook'
         run: yarn build-storybook
   lint-ts:
@@ -102,11 +91,8 @@ jobs:
         env:
           cache-name: cache-node-modules
         with:
-          path: |
-            **/node_modules
-          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-${{ env.cache-name }}-
+          path: "**/node_modules"
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('yarn.lock') }}
       - name: 'Lint TypeScript'
         run: yarn lint:ts
   lint-css:
@@ -124,10 +110,7 @@ jobs:
         env:
           cache-name: cache-node-modules
         with:
-          path: |
-            **/node_modules
-          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-${{ env.cache-name }}-
+          path: "**/node_modules"
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('yarn.lock') }}
       - name: 'Lint CSS'
         run: yarn lint:css
