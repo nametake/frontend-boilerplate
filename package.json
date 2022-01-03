@@ -67,6 +67,8 @@
     "jest": "27.4.5",
     "lint-staged": "12.1.4",
     "node-pre-gyp": "0.17.0",
+    "postcss": "8",
+    "postcss-scss": "^4.0.2",
     "prettier": "2.5.1",
     "stylelint": "14.2.0",
     "stylelint-config-idiomatic-order": "8.1.0",
