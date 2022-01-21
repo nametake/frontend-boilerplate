@@ -9,7 +9,7 @@ module.exports = {
     'airbnb/hooks',
     'prettier', // Must be last
   ],
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'unused-imports'],
   rules: {
     'no-console': ['error'],
     'no-restricted-imports': ['error', { patterns: ['../*'] }],
@@ -41,6 +41,17 @@ module.exports = {
     ],
     'react/prop-types': 'off',
     'react/require-default-props': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
+    'unused-imports/no-unused-imports': 'error',
+    'unused-imports/no-unused-vars': [
+      'error',
+      {
+        vars: 'all',
+        varsIgnorePattern: '^_',
+        args: 'after-used',
+        argsIgnorePattern: '^_',
+      },
+    ],
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
