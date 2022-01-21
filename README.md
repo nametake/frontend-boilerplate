@@ -55,6 +55,11 @@ importのパスを`@/`から始まる絶対パスで指定できるように以�
 
     TypeScriptで型チェックをしているためoffにしています。
 
+-   [eslint-plugin-used-imports](https://github.com/sweepline/eslint-plugin-unused-imports)
+
+    使用していないimportの自動削除のために導入しています。
+
+
 ### Webpack
 
 Webpackでは、TypeScriptで書かれたコードをbabelを使って変換するための基本的な設定をしています。
