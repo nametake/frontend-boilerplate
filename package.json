@@ -19,7 +19,7 @@
       "prettier",
       "eslint"
     ],
-    "*.{jsx,tsx}": [
+    "*.{css,scss,jsx,tsx}": [
       "stylelint"
     ]
   },
