@@ -9,6 +9,7 @@
     "test": "jest",
     "lint:ts": "eslint \"./**/*.{js,jsx,ts,tsx}\"",
     "lint:css": "stylelint \"./**/*.{css,scss,jsx,tsx}\"",
+    "fmt": "prettier ./src --write",
     "start": "webpack serve",
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006 --ci",
