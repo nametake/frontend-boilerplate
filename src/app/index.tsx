@@ -26,7 +26,7 @@ export const App = function App(): JSX.Element {
       return Promise.resolve('ASYNC');
     }
     // finally to pass linter
-    p().finally(() => { });
+    p().finally(() => {});
   }, []);
   return (
     <div>

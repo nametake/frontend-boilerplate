@@ -41,5 +41,5 @@ export const Default = Template.bind({});
 Default.args = {
   checked: false,
   label: 'with text',
-  onChange: () => { },
+  onChange: () => {},
 };
