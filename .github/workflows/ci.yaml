@@ -103,7 +103,7 @@ jobs:
       - name: 'Lint CSS'
         run: yarn lint:css
   prettier:
-    name: Prettier Check Snippets
+    name: Prettier Check
     needs:
       - setup
     runs-on: ubuntu-latest
@@ -118,4 +118,4 @@ jobs:
           path: "**/node_modules"
           key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
       - name: 'Prettier Check'
-        run: yarn prettier --check
+        run: yarn prettier --check ./src
