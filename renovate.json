@@ -7,7 +7,8 @@
     "group:jestMonorepo",
     "group:reactMonorepo",
     "group:storybookMonorepo",
-    "packages:linters"
+    "packages:linters",
+    "packages:stylelint"
   ],
   "vulnerabilityAlerts": {
     "labels": [
