@@ -10,7 +10,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           cache: yarn
-      - name: 'Install'
+      - name: Install
         run: yarn install --frozen-lockfile
       - name: Cache node modules
         uses: actions/cache@v3
@@ -36,7 +36,7 @@ jobs:
           key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-node-modules-
-      - name: 'Test'
+      - name: Test
         run: yarn test
   build:
     name: Build
@@ -55,7 +55,7 @@ jobs:
           key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-node-modules-
-      - name: 'Build'
+      - name: Build
         run: yarn build
   build-storybook:
     name: Build Storybook
@@ -74,7 +74,7 @@ jobs:
           key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-node-modules-
-      - name: 'Build Storybook'
+      - name: Build Storybook
         run: yarn build-storybook
   lint-ts:
     name: Lint TypeScript
@@ -93,7 +93,7 @@ jobs:
           key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-node-modules-
-      - name: 'Lint TypeScript'
+      - name: Lint TypeScript
         run: yarn lint:ts
   lint-css:
     name: Lint CSS
@@ -112,7 +112,7 @@ jobs:
           key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-node-modules-
-      - name: 'Lint CSS'
+      - name: Lint CSS
         run: yarn lint:css
   prettier:
     name: Prettier Check
@@ -131,5 +131,5 @@ jobs:
           key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-node-modules-
-      - name: 'Prettier Check'
+      - name: Prettier Check
         run: yarn prettier --check ./src
