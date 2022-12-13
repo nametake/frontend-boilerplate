@@ -5,12 +5,13 @@
   "author": "nametake",
   "license": "MIT",
   "scripts": {
-    "build": "webpack",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
     "test": "jest",
     "lint:ts": "eslint \"./**/*.{js,jsx,ts,tsx}\"",
     "lint:css": "stylelint \"./**/*.{css,scss,jsx,tsx}\"",
     "fmt": "prettier ./src --write",
-    "start": "webpack serve",
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006 --ci",
     "build-storybook": "build-storybook -o ./dist/storybook"
@@ -52,6 +53,7 @@
     "@types/webpack-dev-server": "4.7.1",
     "@typescript-eslint/eslint-plugin": "5.37.0",
     "@typescript-eslint/parser": "5.37.0",
+    "@vitejs/plugin-react": "^3.0.0",
     "babel-loader": "8.2.5",
     "eslint": "8.23.1",
     "eslint-config-airbnb": "19.0.4",
@@ -70,6 +72,7 @@
     "jest": "29.0.1",
     "lint-staged": "13.0.3",
     "node-pre-gyp": "0.17.0",
+    "postcss": "^8.4.20",
     "postcss-scss": "4.0.5",
     "postcss-syntax": "0.36.2",
     "prettier": "2.7.1",
@@ -79,8 +82,13 @@
     "stylelint-order": "5.0.0",
     "ts-node": "10.9.1",
     "typescript": "4.8.3",
+    "vite": "^4.0.1",
+    "vite-plugin-html": "^3.2.0",
     "webpack": "5.74.0",
     "webpack-cli": "4.10.0",
     "webpack-dev-server": "4.11.0"
+  },
+  "resolutions": {
+    "postcss": "^8.4.16"
   }
 }
