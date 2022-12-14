@@ -8,6 +8,7 @@ const config: StorybookViteConfig = {
     builder: '@storybook/builder-vite',
   },
   viteFinal: async (config) => {
+    // https://github.com/storybookjs/builder-vite/issues/210
     config.plugins = config.plugins?.filter(
       (plugin) =>
         !(
