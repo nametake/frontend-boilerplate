@@ -42,6 +42,7 @@
     "@storybook/addon-actions": "6.5.12",
     "@storybook/addon-essentials": "6.5.12",
     "@storybook/addon-links": "6.5.12",
+    "@storybook/builder-vite": "^0.2.5",
     "@storybook/builder-webpack5": "6.5.12",
     "@storybook/manager-webpack5": "6.5.12",
     "@storybook/react": "6.5.12",
