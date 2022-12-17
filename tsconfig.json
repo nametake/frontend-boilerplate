@@ -17,6 +17,7 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
     "moduleResolution": "node",
     "baseUrl": "./",
     "paths": {
@@ -24,6 +25,7 @@
         "src/*"
       ]
     },
+    "outDir": "./dist",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true
   }

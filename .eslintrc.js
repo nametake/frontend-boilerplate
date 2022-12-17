@@ -71,7 +71,7 @@ module.exports = {
     SharedArrayBuffer: 'readonly',
   },
   settings: {
-    'import/resolver': 'webpack',
+    'import/resolver': 'typescript',
   },
   overrides: [
     {
