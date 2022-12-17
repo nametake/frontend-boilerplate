@@ -25,6 +25,7 @@
         "src/*"
       ]
     },
+    "outDir": "./dist",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true
   }
