@@ -18,7 +18,7 @@ const initState: State = {
 };
 
 type Action =
-  | { type: 'SET_VALUE'; data: DataType[] }
+  | { type: 'COMPLETED_DATA_FETCH'; data: DataType[] }
   | { type: 'EDIT_INPUT'; id: string; value: string }
   | { type: 'CLICK_REMOVE_BUTTON'; id: string }
   | { type: 'EDIT_ADD_INPUT'; value: string }
@@ -26,7 +26,7 @@ type Action =
 
 const reducer = (state: State, action: Action): State => {
   switch (action.type) {
-    case 'SET_VALUE':
+    case 'COMPLETED_DATA_FETCH':
       return { ...state, data: action.data };
     case 'CLICK_REMOVE_BUTTON':
       return {
@@ -71,7 +71,7 @@ export const Reducer = function Reducer(): JSX.Element {
   useEffect(() => {
     setTimeout(() => {
       dispatch({
-        type: 'SET_VALUE',
+        type: 'COMPLETED_DATA_FETCH',
         data: [
           { id: '1', text: 'one' },
           { id: '2', text: 'two' },
