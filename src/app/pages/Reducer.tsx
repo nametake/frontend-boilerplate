@@ -25,7 +25,7 @@ type Action =
   | { type: 'EDIT_ADD_INPUT'; value: string }
   | { type: 'CLICK_ADD_BUTTON' };
 
-const reducer = (state: State, action: Action) => {
+const reducer = (state: State, action: Action): State => {
   switch (action.type) {
     case 'SET_VALUE':
       return { ...state, data: action.data };
