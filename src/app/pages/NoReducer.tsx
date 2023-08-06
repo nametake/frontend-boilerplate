@@ -53,7 +53,7 @@ export const NoReducer = function NoReducer(): JSX.Element {
 
   return (
     <div>
-      <div>data list</div>
+      <div>no reducer</div>
       {data.value.map((d) => (
         <div key={d.id}>
           <span>{d.id}</span>
