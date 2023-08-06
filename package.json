@@ -30,7 +30,9 @@
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.0.0",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "react-hanger": "^2.4.5",
+    "react-router-dom": "^6.14.2"
   },
   "devDependencies": {
     "@babel/core": "7.18.13",

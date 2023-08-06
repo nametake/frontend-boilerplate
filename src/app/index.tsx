@@ -1,47 +1,21 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React from 'react';
 
-import styled from '@emotion/styled';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
-import { Checkbox } from '@/app/components/ui/Checkbox';
-import { Input } from '@/app/components/ui/Input';
+import { NoReducer } from '@/app/pages/NoReducer';
+import { Root } from '@/app/pages/Root';
 
-const Text = styled.div`
-  color: hotpink;
-`;
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Root />,
+  },
+  {
+    path: '/no-reducer',
+    element: <NoReducer />,
+  },
+]);
 
 export const App = function App(): JSX.Element {
-  const [checked1, setChecked1] = useState(false);
-  const handleChangeCheckbox1 = useCallback(() => {
-    setChecked1((c) => !c);
-  }, []);
-
-  const [checked2, setChecked2] = useState(false);
-  const handleChangeCheckbox2 = useCallback(() => {
-    setChecked2((c) => !c);
-  }, []);
-
-  // Async test
-  useEffect(() => {
-    async function p() {
-      return Promise.resolve('ASYNC');
-    }
-    // finally to pass linter
-    p().finally(() => {});
-  }, []);
-  return (
-    <div>
-      <Input />
-      <div>
-        <Checkbox checked={checked2} onChange={handleChangeCheckbox2} />
-      </div>
-      <div>
-        <Checkbox
-          label="Label text"
-          checked={checked1}
-          onChange={handleChangeCheckbox1}
-        />
-      </div>
-      <Text>Hello World!</Text>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 };
