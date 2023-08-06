@@ -24,34 +24,34 @@ type Action =
   | { type: 'EDIT_ADD_INPUT'; value: string }
   | { type: 'CLICK_ADD_BUTTON' };
 
-const reducer = (state: State, action: Action): State => {
+const reducer = (prev: State, action: Action): State => {
   switch (action.type) {
     case 'COMPLETED_DATA_FETCH':
-      return { ...state, data: action.data };
+      return { ...prev, data: action.data };
     case 'CLICK_REMOVE_BUTTON':
       return {
-        ...state,
-        data: state.data.filter((d) => d.id !== action.id),
-        removeTargets: [...state.removeTargets, action.id],
+        ...prev,
+        data: prev.data.filter((d) => d.id !== action.id),
+        removeTargets: [...prev.removeTargets, action.id],
       };
     case 'EDIT_INPUT':
       return {
-        ...state,
-        data: state.data.map((d) =>
+        ...prev,
+        data: prev.data.map((d) =>
           d.id === action.id ? { ...d, text: action.value } : d
         ),
       };
     case 'EDIT_ADD_INPUT':
       return {
-        ...state,
+        ...prev,
         inputValue: action.value,
       };
     case 'CLICK_ADD_BUTTON':
       return {
-        ...state,
+        ...prev,
         data: [
-          ...state.data,
-          { id: Date.now().toString(), text: state.inputValue },
+          ...prev.data,
+          { id: Date.now().toString(), text: prev.inputValue },
         ],
         inputValue: '',
       };
