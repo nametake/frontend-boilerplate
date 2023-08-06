@@ -1,6 +1,5 @@
 import React, { useEffect, useReducer } from 'react';
 
-
 type DataType = {
   id: string;
   text: string;
