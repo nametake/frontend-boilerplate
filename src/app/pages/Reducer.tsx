@@ -8,13 +8,13 @@ type DataType = {
 type State = {
   data: DataType[];
   removeTargets: string[];
-  inputValue: string;
+  addInput: string;
 };
 
 const initState: State = {
   data: [],
   removeTargets: [],
-  inputValue: '',
+  addInput: '',
 };
 
 type Action =
@@ -44,16 +44,16 @@ const reducer = (prev: State, action: Action): State => {
     case 'EDIT_ADD_INPUT':
       return {
         ...prev,
-        inputValue: action.value,
+        addInput: action.value,
       };
     case 'CLICK_ADD_BUTTON':
       return {
         ...prev,
         data: [
           ...prev.data,
-          { id: Date.now().toString(), text: prev.inputValue },
+          { id: Date.now().toString(), text: prev.addInput },
         ],
-        inputValue: '',
+        addInput: '',
       };
     default: {
       const exhaustiveCheck: never = action;
@@ -113,7 +113,7 @@ export const Reducer = function Reducer(): JSX.Element {
         </div>
       ))}
       <div>
-        <input value={state.inputValue} onChange={handleAddInput} />
+        <input value={state.addInput} onChange={handleAddInput} />
         <button type="button" onClick={handleAddButton}>
           add
         </button>
